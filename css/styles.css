@@ -9,7 +9,7 @@
     --title-font: arial;
     --p-font: serif;
     --header-background-color: #990c0c ;
-    --top-footer-background-color: #950505;
+    --top-footer-background-color: #950505ab;
     --bottom-footer-background-color: #640a0a;
     --body-background-color: #fcfcfc;
 }
@@ -217,6 +217,12 @@ body {
 .footer-list li {
     padding-bottom: 0.5rem;
     font-size: 1rem;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    font-weight: bolder;
 }
 
 .bottom-footer-list {
@@ -270,6 +276,12 @@ body {
     font-size: 1.25rem;
     color: white;
     font-family: var(--title-font);
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    font-weight: bolder;
 }
 
 
