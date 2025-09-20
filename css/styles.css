@@ -9,8 +9,9 @@
     --title-font: arial;
     --p-font: serif;
     --header-background-color: #990c0c ;
-    --top-footer-background-color: #973636;
-    --bottom-footer-background-color: #a74e4e ;
+    --top-footer-background-color: #950505;
+    --bottom-footer-background-color: #640a0a;
+    --body-background-color: #fcfcfc;
 }
 
 /* Normalizer */
@@ -19,6 +20,10 @@
     padding: 0;
     box-sizing: border-box;
     /*border: red solid 1px;*/
+}
+
+body {
+    background-color: var(--body-background-color);
 }
 
 /* Body container */
@@ -63,6 +68,11 @@
 
 #header {
     background-color: var(--header-background-color);
+    background-image: url("/img/background-header.jpg");
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 
 .logo-img {
@@ -260,4 +270,57 @@
     font-size: 1.25rem;
     color: white;
     font-family: var(--title-font);
+}
+
+
+/* Breakpoints */
+
+/* Móviles pequeños (portrait) */
+@media (max-width: 480px) {
+  /* estilos para pantallas muy pequeñas */
+    body {
+        background-color: black;
+    }
+}
+
+/* Móviles grandes / phablets */
+@media (max-width: 768px) {
+  /* estilos para móviles y tablets pequeñas */
+    body {
+        background-color: orange; 
+    }
+    .left-area {
+        width: 0%;
+    }
+    .right-area {
+        width: 0%;
+    }
+    .center-area {
+        padding: 1rem;
+    }
+    .footer-section {
+        flex-flow: column;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+/* Tablets en horizontal / pantallas medianas */
+@media (max-width: 1024px) {
+  /* estilos para tablets y laptops pequeñas */
+}
+
+/* Laptops / pantallas medianas-grandes */
+@media (max-width: 1280px) {
+  /* estilos para laptops estándar */
+}
+
+/* Monitores grandes */
+@media (max-width: 1440px) {
+  /* estilos para desktops grandes */
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1600px) {
+  /* estilos para pantallas muy grandes */
 }
