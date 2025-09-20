@@ -185,6 +185,13 @@ body {
     background-color: var(--bottom-footer-background-color);
 }
 
+.area-container.top-footer {
+    background-image: url("/img/background-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
 .footer-section {
     display: flex;
     flex-flow: row;
