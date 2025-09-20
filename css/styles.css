@@ -10,7 +10,7 @@
     --p-font: serif;
     --header-background-color: #990c0c ;
     --top-footer-background-color: #973636;
-    --bottom-footer-background-color: #501818 ;
+    --bottom-footer-background-color: #a74e4e ;
 }
 
 /* Normalizer */
@@ -18,13 +18,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: red solid 1px;
+    /*border: red solid 1px;*/
 }
 
 /* Body container */
 .body-container {
     display: flex;
     flex-flow: column;
+    min-height: 100vh;
+    flex: 1;
 }
 
 /* Area container */
@@ -49,6 +51,7 @@
 
 .header-section {
     width: 100%;
+    padding: 1rem 0;
 }
 
 /* Header */
@@ -101,10 +104,14 @@
 }
 
 /* Main */
+#main {
+    flex: 1;
+}
+
 .product-section {
     display: flex;
     flex-flow: row;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .product-left {
@@ -123,6 +130,11 @@
 .product-title {
     font-family: var(--title-font);
     padding: 0 0 1rem 0;
+}
+
+.product-details-container {
+    display: flex;
+    flex-flow: column;
 }
 
 .product-details {
@@ -147,6 +159,10 @@
 
 .product-box .right {
     width: 70%;
+}
+
+.synopse {
+    padding: 2rem 0rem 0rem 1rem;
 }
 
 /* Footer */
@@ -185,10 +201,63 @@
 .footer-list li.title {
     font-weight: 600;
     padding-bottom: 1rem;
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
 }
 
 .footer-list li {
     padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.bottom-footer-list {
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-small {
+    width: 75px;
+}
+
+.bottom-footer-list .title {
+    font-weight: 600;
+    color: white;
+    font-family: var(--title-font);
+    font-size: 1rem;
+}
+
+.bottom-footer-list li {
+    color: white;
     font-size: 0.75rem;
+}
+
+.footer-list.social-media li {
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 60%;
+    padding: 2rem;
+}
+
+.button {
+    height: 3rem;
+}
+
+.button span {
+    font-size: 1.25rem;
+    font-family: var(--title-font);
+}
+
+.social-media-container span {
+    font-size: 1.25rem;
+    color: white;
+    font-family: var(--title-font);
 }
