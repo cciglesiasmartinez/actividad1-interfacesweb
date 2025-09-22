@@ -1,32 +1,39 @@
-/* Variables */
+/* Variables
+ * Se realiza uso de variables por comodidad, mayormente para poder evaluar cómo quedan 
+ * algunos estilos aplicados a múltiples clases/elementos simplemente cambiando un valor 
+ * de variable en DevTools.
+ */
 :root {
-    --background-color: #0C080D;
-    --container-border-color: #fefefe;
-    --font-1: Helvetica;
-    --font-1-size: 25px;
-    --text-color: #8EBDC4;
-    --white-color: #FEFEFE;
-    --title-font: arial;
-    --p-font: serif;
+    --title-font: Arial;
+    --p-font: Helvetica;
     --header-background-color: #990c0c ;
     --top-footer-background-color: #950505ab;
     --bottom-footer-background-color: #640a0a;
     --body-background-color: #fcfcfc;
 }
 
-/* Normalizer */
+/* Normalizador
+ * Estos estilos ponen por defecto todos los margin y padding a 0. Esto facilitará 
+ * enormemente la tarea de crear un wireframe y evitará posibles errores de maquetado 
+ * por no tener debidamente en cuenta márgenes y paddings preexistentes que asignan 
+ * normalmente los navegadores.
+ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: red solid 1px;*/
 }
 
 body {
     background-color: var(--body-background-color);
 }
 
-/* Body container */
+/* Body container
+ * Es el principal contenedor de la página. Se emplea flexbox en columna para situar
+ * los elementos de manera vertical. Además se provee de una altura mínima de 100vh
+ * y la propiedad flex se ajusta a 1 para asegurar que el contenedor ocupe todo el
+ * espacio disponible y que la altura se ajuste como mínimo siempre a todo el viewport.
+ */
 .body-container {
     display: flex;
     flex-flow: column;
@@ -34,7 +41,12 @@ body {
     flex: 1;
 }
 
-/* Area container */
+/* Area container 
+ * Esta estructura la empleo dentro de cada elemento principal (header, cuerpo y footer)
+ * para distribuirla visualmente en tres partes horizontalmente (row), de modo que los
+ * "márgenes" aparentes a derecha e izquierda tengan un porcentaje (10%) del ancho del
+ * viewport.
+ */
 .area-container {
     display: flex;
     flex-flow: row;
@@ -54,22 +66,32 @@ body {
     flex-flow: column;
 }
 
+/* Header
+ * En la cabecera, además de un contenedor area-container emplearemos un contenedor 
+ * específico header-container para distribuir los elementos en la cabecera de modo
+ * horizontal y con justificado "space-between" para que se ajusten a los márgenes
+ * izquierdo y derecho.
+ */
+
 .header-section {
     width: 100%;
     padding: 1rem 0;
 }
 
-/* Header */
 .header-container {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
 }
 
+/* Empleamos propiedades de imagen, color, position, repeat, size y blend-mode para
+ * crear una cabecera con un color sólido y una imagen mezclados. Usamos la
+ * propiedad background-position en cover para que el fondo cubra todo el espacio 
+ * y blend-mode para mezclar el color sólido de la propiedad color con la imagen.
+ */
 #header {
     background-color: var(--header-background-color);
     background-image: url("/img/background-header.jpg");
-    background-position: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: darken;
@@ -171,7 +193,7 @@ body {
     width: 70%;
 }
 
-.synopse {
+.synopsis {
     padding: 2rem 0rem 0rem 1rem;
 }
 
@@ -185,6 +207,8 @@ body {
     background-color: var(--bottom-footer-background-color);
 }
 
+/* Aplicamos aquí la misma estrategia que en el footer con la imagen de fondo.
+ */
 .area-container.top-footer {
     background-image: url("/img/background-header.jpg");
     background-repeat: no-repeat;
@@ -296,7 +320,6 @@ body {
 
 /* Móviles pequeños (portrait) */
 @media (max-width: 480px) {
-  /* estilos para pantallas muy pequeñas */
     body {
         background-color: black;
     }
@@ -304,7 +327,6 @@ body {
 
 /* Móviles grandes / phablets */
 @media (max-width: 768px) {
-  /* estilos para móviles y tablets pequeñas */
     body {
         background-color: orange; 
     }
@@ -326,20 +348,16 @@ body {
 
 /* Tablets en horizontal / pantallas medianas */
 @media (max-width: 1024px) {
-  /* estilos para tablets y laptops pequeñas */
 }
 
 /* Laptops / pantallas medianas-grandes */
 @media (max-width: 1280px) {
-  /* estilos para laptops estándar */
 }
 
 /* Monitores grandes */
 @media (max-width: 1440px) {
-  /* estilos para desktops grandes */
 }
 
 /* Pantallas extra grandes */
 @media (min-width: 1600px) {
-  /* estilos para pantallas muy grandes */
 }
